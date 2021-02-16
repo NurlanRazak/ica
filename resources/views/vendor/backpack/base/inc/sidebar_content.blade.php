@@ -19,3 +19,6 @@
 
 <li class="nav-title"> ЭЛЕКТРОУСТАНОВКИ</li>
     <li class='nav-item'><a class='nav-link' href='{{ backpack_url('electric') }}'><i class='nav-icon la la-plug'></i> {{ trans_choice('admin.electrics', 2) }} </a></li>
+
+<li class="nav-title"> ПОЖАРНАЯ БЕЗОПАСНОСТЬ</li>
+    <li class='nav-item'><a class='nav-link' href='{{ backpack_url('firesafe') }}'><i class='nav-icon la la-bus-alt'></i> {{ trans_choice('admin.firesaves', 2) }} </a></li>
