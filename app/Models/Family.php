@@ -24,7 +24,10 @@ class Family extends Model
     ];
     // protected $hidden = [];
     // protected $dates = [];
-
+    protected $casts = [
+        'parents' => 'array',
+        'family' => 'array',
+    ];
     /*
     |--------------------------------------------------------------------------
     | FUNCTIONS
@@ -36,7 +39,10 @@ class Family extends Model
     | RELATIONS
     |--------------------------------------------------------------------------
     */
-
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'user_id');
+    }
     /*
     |--------------------------------------------------------------------------
     | SCOPES

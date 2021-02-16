@@ -118,6 +118,8 @@ class UserCrudController extends CrudController
             [
                 'name' => 'number_order',
                 'label' => trans('admin.number_order'),
+                'type' => 'number',
+                'prefix' => '№',
                 'wrapper' => [
                     'class' => 'form-group col-sm-6',
                 ],
