@@ -16,3 +16,6 @@
 
 <li class="nav-title"> ПОЖАРНО-ТЕХНИЧЕСКИЙ МИНИМУМ</li>
     <li class='nav-item'><a class='nav-link' href='{{ backpack_url('techminimum') }}'><i class='nav-icon la la-water'></i> {{ trans_choice('admin.techminimums', 2)}} </a></li>
+
+<li class="nav-title"> ЭЛЕКТРОУСТАНОВКИ</li>
+    <li class='nav-item'><a class='nav-link' href='{{ backpack_url('electric') }}'><i class='nav-icon la la-plug'></i> {{ trans_choice('admin.electrics', 2) }} </a></li>
