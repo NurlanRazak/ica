@@ -7,3 +7,5 @@
 <li class='nav-item'><a class='nav-link' href='{{ backpack_url('pressurevessel') }}'><i class='nav-icon la la-expand'></i> {{ trans_choice('admin.pressurevessels', 2) }}</a></li>
 
 <li class='nav-item'><a class='nav-link' href='{{ backpack_url('cran') }}'><i class='nav-icon la la-tools'></i> {{ trans_choice('admin.crans', 2) }}</a></li>
+
+<li class='nav-item'><a class='nav-link' href='{{ backpack_url('firehazard') }}'><i class='nav-icon la la-fire-alt'></i> {{ trans_choice('admin.firehazards', 2) }}</a></li>
