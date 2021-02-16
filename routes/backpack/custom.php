@@ -19,4 +19,5 @@ Route::group([
     Route::crud('pressurevessel', 'PressurevesselCrudController');
     Route::crud('cran', 'CranCrudController');
     Route::crud('firehazard', 'FirehazardCrudController');
+    Route::crud('methanol', 'MethanolCrudController');
 }); // this should be the absolute last line of this file
