@@ -17,3 +17,17 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('cache/clear', function () {
+    Artisan::call('cache:clear');
+    Artisan::call('config:clear');
+    Artisan::call('route:clear');
+
+    return 'ok';
+});
+
+Route::get('migrate', function () {
+    Artisan::call('migrate');
+
+    return 'ok';
+});

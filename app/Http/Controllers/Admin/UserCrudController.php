@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Requests\UserRequest;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
+use App\Models\Position;
 
 class UserCrudController extends CrudController
 {
@@ -72,6 +73,20 @@ class UserCrudController extends CrudController
             [
                 'name' => 'name',
                 'label' => trans('admin.name'),
+                'wrapper' => [
+                    'class' => 'form-group col-sm-6',
+                ],
+            ],
+            [
+                'name' => 'position_id',
+                'label' => trans('admin.position_name'),
+                'type' => 'select2',
+                'entity' => 'position',
+                'attribute' => 'name',
+                'model' => Position::class,
+                'wrapper' => [
+                    'class' => 'form-group col-sm-6',
+                ],
             ],
             [
                 'name' => 'phone',

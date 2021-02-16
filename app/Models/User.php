@@ -28,7 +28,8 @@ class User extends Authenticatable
         'issued_organization',
         'expiring_date_identification',
         'number_order',//nomer prikaza
-        'recruitment_date'
+        'recruitment_date',
+        'position_id',
     ];
 
     /**
@@ -49,4 +50,9 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function position()
+    {
+        return $this->belongsTo(Position::class, 'position_id');
+    }
 }
