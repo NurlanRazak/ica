@@ -13,3 +13,6 @@
         <li class='nav-item'><a class='nav-link' href='{{ backpack_url('firehazard') }}'><i class='nav-icon la la-fire-alt'></i> {{ trans_choice('admin.firehazards', 2) }}</a></li>
 
         <li class='nav-item'><a class='nav-link' href='{{ backpack_url('methanol') }}'><i class='nav-icon la la-medium'></i> {{ trans_choice('admin.methanols', 2) }}</a></li>
+
+<li class="nav-title"> ПОЖАРНО-ТЕХНИЧЕСКИЙ МИНИМУМ</li>
+    <li class='nav-item'><a class='nav-link' href='{{ backpack_url('techminimum') }}'><i class='nav-icon la la-water'></i> {{ trans_choice('admin.techminimums', 2)}} </a></li>
