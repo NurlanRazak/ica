@@ -5,7 +5,6 @@
 
 <li class='nav-item'><a class='nav-link' href='{{ backpack_url('family') }}'><i class='nav-icon la la-home'></i> {{ trans_choice('admin.families', 2) }}</a></li>
 
-{{--<li class="nav-title"> Проверка знание по ПБ (ПРОМЫШЛЕННОЙ БЕЗОПАСНОСТИ)</li>--}}
 <li class="nav-title"> ПРОМЫШЛЕННАЯ БЕЗОПАСНОСТЬ</li>
         <li class='nav-item'><a class='nav-link' href='{{ backpack_url('pressurevessel') }}'><i class='nav-icon la la-expand'></i> {{ trans_choice('admin.pressurevessels', 2) }}</a></li>
 
@@ -29,3 +28,4 @@
         <li class='nav-item'><a class='nav-link' href='{{ backpack_url('firehazard') }}'><i class='nav-icon la la-fire-alt'></i> {{ trans_choice('admin.firehazards', 2) }}</a></li>
         <li class='nav-item'><a class='nav-link' href='{{ backpack_url('gashazard') }}'><i class='nav-icon la la-seedling'></i> {{ trans_choice('admin.gashazards', 2) }}</a></li>
         <li class='nav-item'><a class='nav-link' href='{{ backpack_url('earthen') }}'><i class='nav-icon la la-globe'></i> {{ trans_choice('admin.earthens', 2) }}</a></li>
+        <li class='nav-item'><a class='nav-link' href='{{ backpack_url('capacity') }}'><i class='nav-icon la la-chess-pawn'></i> {{ trans_choice('admin.capacities', 2) }}</a></li>
