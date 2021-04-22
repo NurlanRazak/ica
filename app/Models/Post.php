@@ -26,7 +26,7 @@ class Post extends Model
     // protected $fillable = [];
     // protected $hidden = [];
     // protected $dates = [];
-
+    protected $appends = ['img'];
     /*
     |--------------------------------------------------------------------------
     | FUNCTIONS
@@ -65,6 +65,11 @@ class Post extends Model
             self::PUBLISHED => trans('admin.published'),
             self::DRAFT => trans('admin.draft'),
         ];
+    }
+
+    public function getImgAttribute()
+    {
+        return env('APP_URL').'/uploads/'.$this->image;
     }
     /*
     |--------------------------------------------------------------------------
