@@ -18,7 +18,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('post', 'PostController@getPosts');
+Route::get('posts', 'PostController@getPosts');
+Route::get('post', 'PostController@show');
 
 Route::get('cache/clear', function () {
     Artisan::call('cache:clear');

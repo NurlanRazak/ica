@@ -13,9 +13,16 @@ class PostController extends Controller
 
     public function getPosts(Request $request)
     {
-        $posts = Post::active()->orderBy('lft')->get();
+        $posts = Post::select('id', 'name', 'image', 'created_at')->active()->orderBy('lft')->get();
 
         return $this->success($posts);
+    }
+
+    public function show(Request $request)
+    {
+        $post = Post::findOrFail($request->id);
+
+        return $this->success($post);
     }
 
 }
