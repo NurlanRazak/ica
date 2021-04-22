@@ -22,11 +22,12 @@ class PostCrudController extends DefaultCrudController
             [
                 'name' => 'name',
                 'label' => trans('admin.title'),
+				'limit' => 50,
             ],
             [
                 'name' => 'description',
                 'label' => trans('admin.description'),
-                'limit' => 100,
+                'limit' => 50,
             ],
             [
                 'name' => 'image',
