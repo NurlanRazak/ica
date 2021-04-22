@@ -21,6 +21,9 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::get('posts', 'PostController@getPosts');
 Route::get('post', 'PostController@show');
 
+Route::post('/auth/login', 'AuthController@login');
+Route::get('verify/phone', 'AuthController@verifyPhone');
+
 Route::get('cache/clear', function () {
     Artisan::call('cache:clear');
     Artisan::call('config:clear');
