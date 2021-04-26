@@ -21,26 +21,11 @@ class AuthController extends Controller
 
     public function login(Request $request)
     {
-        $user = User::where('phone', $request->phone)->first();
-        if (!$user) {
-            $user = User::create([
-                'phone' => $request->phone,
-            ]);
-        }
+        $user = User::where('phone', $request->phone)->where('password', $request->password)->first();
 
-        $token = VerificationToken::create([
-            'user_id' => $user->id,
-            'phone' => $request->phone,
-            'token' => $this->generateToken($request->phone),
+        return $this->success([
+            'token' => $token->user->createToken('API Token')->plainTextToken
         ]);
-
-        SendSmsJob::dispatch(
-            config('lmservice_auth.sms_service'),
-            $token->phone,
-            trans('auth.your_code', ['code' => $token->token])
-        );
-
-        return $this->success([], trans('admin.token_required'), 200);
     }
 
     public function verifyPhone(Request $request)
