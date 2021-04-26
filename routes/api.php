@@ -21,8 +21,11 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::get('posts', 'PostController@getPosts');
 Route::get('post', 'PostController@show');
 
-Route::post('/auth/login', 'AuthController@login');
-Route::get('verify/phone', 'AuthController@verifyPhone');
+Route::post('auth/login', 'AuthController@login');
+
+Route::middleware('auth:sanctum')->group(function () {
+    Route::get('info', 'UserController@info');
+});
 
 Route::get('cache/clear', function () {
     Artisan::call('cache:clear');
