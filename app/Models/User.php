@@ -56,4 +56,59 @@ class User extends Authenticatable
     {
         return $this->belongsTo(Position::class, 'position_id');
     }
+
+    public function techminimums()
+    {
+        return $this->hasMany(Techminimum::class, 'user_id');
+    }
+
+    public function electrics()
+    {
+        return $this->hasMany(Electric::class, 'user_id');
+    }
+
+    public function earthens()
+    {
+        return $this->hasMany(Earthen::class, 'user_id');
+    }
+
+    public function crans()
+    {
+        return $this->hasMany(Cran::class, 'user_id');
+    }
+
+    public function capacities()
+    {
+        return $this->hasMany(Capacity::class, 'user_id');
+    }
+
+    public function firehazards()
+    {
+        return $this->hasMany(Firehazard::class, 'user_id');
+    }
+
+    public function firesaves()
+    {
+        return $this->hasMany(Firesafe::class, 'user_id');
+    }
+
+    public function gashazards()
+    {
+        return $this->hasMany(Gashazard::class, 'user_id');
+    }
+
+    public function labors()
+    {
+        return $this->hasMany(Labor::class, 'user_id');
+    }
+
+    public function methanols()
+    {
+        return $this->hasMany(Methanol::class, 'user_id');
+    }
+
+    public function pressurevessels()
+    {
+        return $this->hasMany(Pressurevessel::class, 'user_id');
+    }
 }
