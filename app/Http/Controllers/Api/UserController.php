@@ -15,7 +15,21 @@ class UserController extends Controller
     public function info(Request $request)
     {
         $user = $request->user();
-        $user = User::whereId($user->id)->with('position', 'techminimums', 'electrics', 'earthens', 'crans', 'capacities', 'firehazards', 'firesaves', 'gashazards', 'labors', 'methanols', 'pressurevessels')->first();
+        $user = User::whereId($user->id)
+            ->with(
+                'position',
+                'techminimums',
+                'electrics',
+                'earthens',
+                'crans',
+                'capacities',
+                'firehazards',
+                'firesaves',
+                'gashazards',
+                'labors',
+                'methanols',
+                'pressurevessels'
+            )->first();
 
         return $this->success($user);
     }
